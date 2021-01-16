@@ -89,3 +89,10 @@ td.income {
 td.expense {
   color: #E92929;
 }
+
+footer {
+  text-align: center;
+  padding: 4rem 0 2rem;
+  color: #363f5f;
+  opacity: 0.6;
+}
