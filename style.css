@@ -86,17 +86,22 @@ a:hover {
 }
 
 #data-table {
+  display: block;
   width: 100%;
   border-spacing: 0 0.5rem;
   color: #969cb3;
+
+  overflow-x: auto;
 }
 table th {
   background-color: white;
   font-weight: 400;
   padding: 1rem 2rem;
   text-align: left; 
+  width: 100%;
 }
 table td {
+  width: 100%;
   background-color: white;
   padding: 1rem 2rem;
 }
