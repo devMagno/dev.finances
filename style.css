@@ -69,6 +69,19 @@ h2 {
   color: white;
 }   
 
+a {
+  color: #49AA26;
+  text-decoration: none;
+  transition: color .2s;
+}
+a:hover {
+  color: #3DD705;
+}
+.button.new {
+  display: inline-block;
+  margin-bottom: .8rem;
+}
+
 #data-table {
   width: 100%;
   border-spacing: 0 0.5rem;
