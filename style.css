@@ -7,6 +7,9 @@ body {
   background: #F0F2F5;
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
+html {
+  font-size: 93.75%;
+}
 .sr-only {
   position: absolute;
   width: 1px;
@@ -130,4 +133,17 @@ footer {
   padding: 4rem 0 2rem;
   color: #363f5f;
   opacity: 0.6;
+}
+
+
+
+@media only screen and (min-width: 800px) {
+  html {
+    font-size: 87.5%;
+  }
+  #balance {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
 }
