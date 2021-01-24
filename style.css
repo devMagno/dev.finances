@@ -84,6 +84,34 @@ a:hover {
   display: inline-block;
   margin-bottom: .8rem;
 }
+button {
+  width: 100%;
+  height: 50px;
+  border: none;
+  color: white;
+  background: #49AA26;
+  padding: 0;
+  border-radius: .2rem;
+  cursor: pointer;
+  transition: .2s;
+  font-size: 1rem;
+}
+button:hover {
+  background: #3DD705;
+}
+.button.cancel {
+  color: #E92929;
+  border: 2px solid;
+  border-radius: .2rem;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .2s;
+}
+.button.cancel:hover {
+  color: #e92929b6;
+}
 
 #data-table {
   display: block;
@@ -153,6 +181,35 @@ td.expense {
   background: #F0F2F5;
   padding: 2.4rem;
 }
+.form {
+  max-width: 500px;
+}
+.form h2 {
+  margin-top: 0;
+}
+.input-group {
+  margin-top: 0.8rem;
+}
+input {
+  border: none;
+  width: 100%;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  border-radius: 0.2rem;
+  padding: 0.8rem;
+}
+.input-group small {
+  opacity: 0.5;
+}
+.input-group.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.input-group.actions .button,
+.input-group.actions button {
+  width: 48%;
+}
+
 footer {
   text-align: center;
   padding: 4rem 0 2rem;
