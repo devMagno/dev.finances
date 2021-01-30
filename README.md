@@ -11,6 +11,10 @@
 
 ---
 
+## 🛰️ Funcionalidades
+
+---
+
 ## 🖥️ Demonstração
 
 ---
