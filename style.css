@@ -197,6 +197,12 @@ input {
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
   border-radius: 0.2rem;
   padding: 0.8rem;
+  outline: none;
+  transition: box-shadow .2s;
+}
+input:hover,
+input:focus {
+  box-shadow: inset 0px 0px 0px 1px #12A454;
 }
 .input-group small {
   opacity: 0.5;
