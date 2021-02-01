@@ -8,6 +8,14 @@ const utils = {
       currency: "BRL"
     })
     return signal + value
+  },
+  formatAmount(value) {
+    value = value * 100
+    return Math.round(value)
+  },
+  formatDate(value) {
+    const splittedDate = value.split("-")
+    return `${splittedDate[2]}/${splittedDate[1]}/${splittedDate[0]}`
   }
 }
 
