@@ -132,6 +132,7 @@ table td {
   width: 100%;
   background-color: white;
   padding: 1rem 2rem;
+  white-space: nowrap;
 }
 table tbody tr {
   opacity: 0.7;
