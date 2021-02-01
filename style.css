@@ -121,6 +121,9 @@ button:hover {
 
   overflow-x: auto;
 }
+#data-table img {
+  cursor: pointer;
+}
 table th {
   background-color: white;
   font-weight: 400;
