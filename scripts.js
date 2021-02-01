@@ -20,6 +20,23 @@ const modal = {
   } 
 }
 
+transactions = [
+  {
+    description: 'Luz',
+    amount: -20000,
+    date: '01/02/2021'
+  },
+  {
+    description: 'Freela JIC',
+    amount: 120000,
+    date: '15/02/2021'
+  },
+  {
+    description: 'Freela Nerau',
+    amount: 500000,
+    date: '15/02/2021'
+  }
+]
 const transaction = {
   incomes() {
     let income = 0
