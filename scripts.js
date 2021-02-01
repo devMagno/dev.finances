@@ -28,23 +28,6 @@ const modal = {
   } 
 }
 
-transactions = [
-  {
-    description: 'Luz',
-    amount: -20000,
-    date: '01/02/2021'
-  },
-  {
-    description: 'Freela JIC',
-    amount: 120000,
-    date: '15/02/2021'
-  },
-  {
-    description: 'Freela Nerau',
-    amount: 500000,
-    date: '15/02/2021'
-  }
-]
 const transaction = {
   all: transactions,
   add(trans) {
@@ -114,26 +97,6 @@ const DOM = {
   }
 }
 
-const app = {
-  init() {
-    transaction.all.forEach((el, index) => {
-      DOM.addTransaction(el, index)
-    })
-    DOM.updateBalance()    
-  },
-  reload() {
-    DOM.clearTransactions()
-    this.init()
-  }
-}
-app.init()
-
-transaction.add({
-  description: 'Água',
-  amount: -20000,
-  date: '01/02/2021' 
-})
-
 const form = {
   description: document.querySelector('input#description'),
   amount: document.querySelector('input#amount'),
@@ -179,3 +142,17 @@ const form = {
    }
   },
 }
+
+const app = {
+  init() {
+    transaction.all.forEach((el, index) => {
+      DOM.addTransaction(el, index)
+    })
+    DOM.updateBalance()    
+  },
+  reload() {
+    DOM.clearTransactions()
+    this.init()
+  }
+}
+app.init()
