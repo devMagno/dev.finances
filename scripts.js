@@ -28,8 +28,18 @@ const modal = {
   } 
 }
 
+const storage = {
+  get() {
+    return JSON.parse(localStorage.getItem("dev.finances:transaction")) || []
+  },
+  set(transactions) {
+    localStorage.setItem("dev.finances:transaction", JSON.stringify(transactions))
+  }
+}
+storage.get()
+
 const transaction = {
-  all: transactions,
+  all: storage.get(),
   add(trans) {
     this.all.push(trans)
     app.reload()
@@ -41,7 +51,7 @@ const transaction = {
 
   incomes() {
     let income = 0
-    transactions.forEach((el) => {
+    this.all.forEach((el) => {
       if(el.amount > 0) {
         income += el.amount
       }
@@ -50,7 +60,7 @@ const transaction = {
   },
   expenses() {
     let expense = 0
-    transactions.forEach((el) => {
+    this.all.forEach((el) => {
       if(el.amount < 0) {
         expense += el.amount
       }
@@ -148,7 +158,8 @@ const app = {
     transaction.all.forEach((el, index) => {
       DOM.addTransaction(el, index)
     })
-    DOM.updateBalance()    
+    DOM.updateBalance()
+    storage.set(transaction.all)
   },
   reload() {
     DOM.clearTransactions()
