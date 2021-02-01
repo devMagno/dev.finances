@@ -132,3 +132,49 @@ transaction.add({
   amount: -20000,
   date: '01/02/2021' 
 })
+
+const form = {
+  description: document.querySelector('input#description'),
+  amount: document.querySelector('input#amount'),
+  date: document.querySelector('input#date'),
+  getValues() {
+    return {
+      description: this.description.value,
+      amount: this.amount.value,
+      date: this.date.value
+    }
+  },
+  validateFields() {
+    const {description, amount, date} = this.getValues()
+    if(description.trim() == '' || amount.trim() == '' || date.trim() == '') {
+      throw new Error("Todos os campos devem ser preenchidos!")
+    }
+  },
+  formatValues() {
+    let {description, amount, date} = this.getValues()
+    amount = utils.formatAmount(amount)
+    date = utils.formatDate(date)
+    return {description, amount, date}
+  },
+  saveTransaction(trans) {
+    transaction.add(trans)
+  },
+  clearFields() {
+    this.description.value = ""
+    this.amount.value = ""
+    this.date.value = ""
+  },
+
+  submit(event) {
+   event.preventDefault()
+   try {
+     this.validateFields()
+     const transaction = this.formatValues()
+     this.saveTransaction(transaction)
+     this.clearFields()
+     modal.close()
+   } catch (error) {
+     alert(error.message)
+   }
+  },
+}
