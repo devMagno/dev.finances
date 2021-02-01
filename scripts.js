@@ -43,6 +43,11 @@ const transaction = {
     this.all.push(trans)
     app.reload()
   },
+  remove(index) {
+    this.all.splice(index, 1)
+    app.reload()
+  },
+
   incomes() {
     let income = 0
     transactions.forEach((el) => {
