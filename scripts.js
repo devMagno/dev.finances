@@ -82,7 +82,7 @@ const transaction = {
 
 const DOM = {
   transactionContainer: document.querySelector('#data-table tbody'),
-  innerHTMLTransaction(transaction) {
+  innerHTMLTransaction(transaction, index) {
     const cssClass = transaction.amount > 0 ? 'income' : 'expense'
     const amount = utils.formatCurrency(transaction.amount)
     const html = 
@@ -91,14 +91,15 @@ const DOM = {
     <td class="${cssClass}">${amount}</td>
     <td class="date">${transaction.date}</td>
     <td>
-      <img src="assets/minus.svg" alt="Remover transação">
+      <img src="assets/minus.svg" alt="Remover transação" onclick="transaction.remove(${index})">
     </td>
     `
     return html
   },
   addTransaction(transaction, index) {
     const tr = document.createElement('tr')
-    tr.innerHTML = DOM.innerHTMLTransaction(transaction)
+    tr.innerHTML = DOM.innerHTMLTransaction(transaction, index)
+    tr.dataset.index = index
     this.transactionContainer.appendChild(tr)
   },
 
@@ -115,8 +116,8 @@ const DOM = {
 
 const app = {
   init() {
-    transaction.all.forEach((el) => {
-      DOM.addTransaction(el)
+    transaction.all.forEach((el, index) => {
+      DOM.addTransaction(el, index)
     })
     DOM.updateBalance()    
   },
