@@ -38,6 +38,11 @@ transactions = [
   }
 ]
 const transaction = {
+  all: transactions,
+  add(trans) {
+    this.all.push(trans)
+    app.reload()
+  },
   incomes() {
     let income = 0
     transactions.forEach((el) => {
@@ -88,9 +93,29 @@ const DOM = {
     document.getElementById('incomeDisplay').innerHTML = utils.formatCurrency(transaction.incomes())
     document.getElementById('expenseDisplay').innerHTML = utils.formatCurrency(transaction.expenses())
     document.getElementById('totalDisplay').innerHTML = utils.formatCurrency(transaction.total())
+  },
+
+  clearTransactions() {
+    this.transactionContainer.innerHTML = ''
   }
 }
-transactions.forEach((el) => {
-  DOM.addTransaction(el)
+
+const app = {
+  init() {
+    transaction.all.forEach((el) => {
+      DOM.addTransaction(el)
+    })
+    DOM.updateBalance()    
+  },
+  reload() {
+    DOM.clearTransactions()
+    this.init()
+  }
+}
+app.init()
+
+transaction.add({
+  description: 'Água',
+  amount: -20000,
+  date: '01/02/2021' 
 })
-DOM.updateBalance()
