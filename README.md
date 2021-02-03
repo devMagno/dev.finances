@@ -16,10 +16,14 @@
 ---
 
 ## 🖥️ Demonstração
+[![dev.finances](https://i.imgur.com/8LztHtq.png "Clique para acessar o projeto")](https://devmagno.github.io/dev.finances/index.html "Clique para acessar o projeto")   
+
+Você pode acessar o projeto clicando [aqui](https://devmagno.github.io/dev.finances/index.html).
 
 ---
 
 ## 🔖 Layout
+O layout do projeto foi desenvolvido por [Tiago Luchtenberg](https://www.instagram.com/tiagoluchtenberg/?hl=pt-br) e pode ser acessado clicando [aqui](https://www.figma.com/file/38I8rGk0km4gMpb4ZxaT7c/dev.finance%24-Maratona-Discover-(Copy)).
 
 ---
 
