@@ -8,6 +8,9 @@
 ---
 
 ## 🚀 Tecnologias e ferramentas utilizadas
+- **HTML5**
+- **CSS3**
+- **JavaScript**
 
 ---
 
