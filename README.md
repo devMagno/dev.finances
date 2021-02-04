@@ -16,6 +16,10 @@ O projeto **dev.finances** trata-se de um aplicativo de controle financeiro dese
 ---
 
 ## 🛰️ Funcionalidades
+- Modal com formulário para adição de transação
+- Remoção de transação ao clique
+- Validação client-side dos dados
+- Armazenamento e persistência de dados com Local Storage
 
 ---
 
