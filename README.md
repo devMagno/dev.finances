@@ -4,6 +4,7 @@
 </p>
 
 ## 📖 Sobre
+O projeto **dev.finances** trata-se de um aplicativo de controle financeiro desenvolvido durante a **Maratona Discover** da **[Rocketseat](https://github.com/Rocketseat)**, com o intuito de pôr em prática os conceitos de **HTML5**, **CSS3** e **JS** aprendidos durante os cursos do Discover. Vi nessa maratona e nos cursos do Discover uma oportunidade de rever e solidificar alguns conceitos das tecnologias base do desenvolvimento front-end que venho estudando.
 
 ---
 
