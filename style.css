@@ -225,7 +225,13 @@ footer {
   padding: 4rem 0 2rem;
   color: #51545f;
 }
-
+footer a {
+  color: #51545f;
+}
+footer a:hover {
+  color: #51545f;
+  text-decoration: underline;
+}
 
 
 @media only screen and (min-width: 800px) {
