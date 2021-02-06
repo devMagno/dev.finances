@@ -56,6 +56,28 @@ header {
   padding: 2rem 0 10rem;
   text-align: center;
 }
+.header-container {
+  display: inline-block;
+  position: relative;
+  width: min(90vw, 800px);
+}
+.theme-switcher.button {
+  position: absolute;
+  right: 0px;
+  top: 10px;
+
+  color: var(--green);
+
+  padding: 2px 6px;
+
+  border: 1px solid;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.theme-switcher.button:hover {
+  color: #3DD705;
+}
 header h1 {
   color: var(--main-light-color);
   font-weight: 100;
