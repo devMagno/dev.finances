@@ -8,6 +8,21 @@
   --header-bg-color: #2D4A22;
   --bg-color: #F0F2F5
 }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-font-color: #F0F2F5;
+    --green: #49aa26;
+    --light-green: #555;
+    --expense: #E92929;
+    --main-light-color: #1f1b24;
+    --table-color: #121212;
+    --header-bg-color: #121212;
+    --bg-color:#1f1b24;
+  }
+  .card {
+    box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.479);
+  }
+}
 * {
   margin: 0;
   padding: 0;
