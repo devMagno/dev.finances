@@ -96,6 +96,9 @@ h2 {
   background-color: var(--green);
   color: var(--main-light-color);
 }   
+.svg {
+  stroke: var(--main-light-color);
+}
 
 a {
   color: var(--green);
