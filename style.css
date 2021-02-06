@@ -1,10 +1,20 @@
+:root {
+  --main-font-color: #363F5F;
+  --green: #49AA26;
+  --light-green: #3DD705;
+  --expense: #E92929;
+  --main-light-color: #FFFFFF;
+  --table-color: #FFFFFF;
+  --header-bg-color: #2D4A22;
+  --bg-color: #F0F2F5
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  background: #F0F2F5;
+  background: var(--bg-color);
   font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
 html {
@@ -27,12 +37,12 @@ html {
 }
 
 header {
-  background: #2D4A22;
+  background: var(--header-bg-color);
   padding: 2rem 0 10rem;
   text-align: center;
 }
 header h1 {
-  color: white;
+  color: var(--main-light-color);
   font-weight: 100;
 }
 
@@ -40,20 +50,20 @@ header h1 {
   margin-top: -8rem;
 }
 #balance h2 {
-  color: white;
+  color: var(--main-light-color);
 }
 h2 {
   margin-top: 3.2rem;
   margin-bottom: 0.8rem;
-  color: #363f5f;
+  color: var(--main-font-color);
   font-weight: 400;
 }
 .card {
-  background: white; 
+  background: var(--main-light-color); 
   padding: 1.5rem 2rem;
   border-radius: 0.25rem;
   margin-bottom: 2rem;
-  color: #363f5f;
+  color: var(--main-font-color);
 }
 .card h3 {
   font-weight: 400;
@@ -68,17 +78,17 @@ h2 {
   margin-top: 1rem;
 }
 .card:last-child {
-  background-color: #49AA26;
-  color: white;
+  background-color: var(--green);
+  color: var(--main-light-color);
 }   
 
 a {
-  color: #49AA26;
+  color: var(--green);
   text-decoration: none;
   transition: color .2s;
 }
 a:hover {
-  color: #3DD705;
+  color: var(--light-green);
 }
 .button.new {
   display: inline-block;
@@ -88,8 +98,8 @@ button {
   width: 100%;
   height: 50px;
   border: none;
-  color: white;
-  background: #49AA26;
+  color: var(--main-light-color);
+  background: var(--green);
   padding: 0;
   border-radius: .2rem;
   cursor: pointer;
@@ -100,7 +110,7 @@ button:hover {
   background: #3DD705;
 }
 .button.cancel {
-  color: #E92929;
+  color: var(--expense);
   border: 2px solid;
   border-radius: .2rem;
   height: 50px;
@@ -110,7 +120,7 @@ button:hover {
   transition: .2s;
 }
 .button.cancel:hover {
-  color: #e92929b6;
+  color: #E92929b6;
 }
 
 #data-table {
@@ -125,7 +135,7 @@ button:hover {
   cursor: pointer;
 }
 table th {
-  background-color: white;
+  background-color: var(--table-color);
   font-weight: 400;
   padding: 1rem 2rem;
   text-align: left; 
@@ -156,13 +166,13 @@ table img {
   display: block;
 }
 td.description {
-  color: #363f5f;
+  color: var(--main-font-color);
 }
 td.income {
   color: #12A454;
 }
 td.expense {
-  color: #E92929;
+  color: var(--expense);
 }
 
 .modal-overlay {
@@ -176,13 +186,14 @@ td.expense {
   justify-content: center;
   opacity: 0;
   visibility: hidden;
+  z-index: 100;
 }
 .modal-overlay.active {
   opacity: 1;
   visibility: visible;
 }
 .modal {
-  background: #F0F2F5;
+  background: var(--bg-color);
   padding: 2.4rem;
 }
 .form {
@@ -209,6 +220,7 @@ input:focus {
 }
 .input-group small {
   opacity: 0.5;
+  color: var(--main-font-color);
 }
 .input-group.actions {
   display: flex;
@@ -223,13 +235,15 @@ input:focus {
 footer {
   text-align: center;
   padding: 4rem 0 2rem;
-  color: #51545f;
+  color: var(--main-font-color);
+  opacity: 0.6;
+  z-index: 0;
 }
 footer a {
-  color: #51545f;
+  color: var(--main-font-color);
 }
 footer a:hover {
-  color: #51545f;
+  color: var(--main-font-color);
   text-decoration: underline;
 }
 
