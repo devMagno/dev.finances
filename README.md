@@ -20,6 +20,7 @@ O projeto **dev.finances** trata-se de um aplicativo de controle financeiro dese
 - Remoção de transação ao clique
 - Validação client-side dos dados
 - Armazenamento e persistência de dados com Local Storage
+- Alteração de tema com JavaScript e variáveis CSS
 
 ---
 
